@@ -13,7 +13,7 @@ Random notes. WIP.
 
 ## TODO
 
-- [ ] import from blogger
+- [x] import from blogger
 - [ ] md toc
 - [ ] md tag list
 - [ ] gen docs (?)

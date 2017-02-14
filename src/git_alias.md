@@ -3,7 +3,7 @@
 ```
   aa = add --all
   cl = clone
-  f = fetch
+  f = fetch --prune
   co = checkout
   cob = !sh -c 'git checkout -b $1 && git push -u --no-verify origin $1' -
   cogr = !sh -c 'git branch --all | grep --color=never $1 | sed -n -e "s-remotes/origin/--p" | xargs git checkout' -
