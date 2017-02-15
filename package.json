@@ -4,7 +4,9 @@
   "description": "Random notes. Like I said.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"lol\" && exit 1"
+    "test": "echo \"lol\" && exit 1",
+    "build": "node scripts/build.js",
+    "lazy": "npm run build && git add --all && git commit -am 'auto-update' && git push"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/szkrd/wiki/issues"
   },
-  "homepage": "https://github.com/szkrd/wiki#readme"
+  "homepage": "https://github.com/szkrd/wiki#readme",
+  "devDependencies": {
+    "dedent": "0.7.0",
+    "shelljs": "0.7.6"
+  }
 }
