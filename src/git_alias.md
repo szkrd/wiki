@@ -6,11 +6,13 @@
   f = fetch --prune
   co = checkout
   cob = !sh -c 'git checkout -b $1 && git push -u --no-verify origin $1' -
-  cogr = !sh -c 'git branch --all | grep --color=never $1 | sed -n -e "s-remotes/origin/--p" | xargs git checkout' -
+  cogr = !sh -c 'git branch --all --color=never | grep --color=never $1 | sed -n -e "s-remotes/origin/--p" | xargs git checkout' -
   cof = !sh -c 'git co feature/$1' -
   cod = checkout development
   ci = commit
   cam = commit -am
+  camN = commit --no-verify -am
+  whoops = commit --amend -all
   caa = !git add --all && git commit
   go = !git add --all && git commit && git push
   br = branch
@@ -24,10 +26,12 @@
   ss = status -s
   pu = push
   puf = push -f
+  puN = push --no-verify
   pom = push origin master
   md = merge development
   uncommit = reset --soft HEAD^
   slap = !git clean -fd && git reset --hard && git checkout . && git status
+  flush = stash clear
   p = pull
   pr = !git fetch && git pull --rebase
   sp = !git stash && git fetch && git pull && git stash pop
