@@ -16,7 +16,7 @@
   caa = !git add --all && git commit
   go = !git add --all && git commit && git push
   br = branch
-  brkill = !sh -c 'git branch -D -r $1 | git remote prune origin' -
+  brkill = !sh -c 'git branch -D $1 | git push --no-verify origin :$1' -
   rb = rebase
   rbi = rebase --interactive
   rbc = rebase --continue
